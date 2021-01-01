@@ -1,6 +1,6 @@
 {
   "name": "cli-tools",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "CLI commands written in node.js",
   "main": "./src/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "bin": {
     "cli-tools": "src/index.js",
     "s2t": "src/s2t.js",
-    "replace-texts": "src/replaceTexts.js"
+    "rptxt": "src/replaceTexts.js"
   },
   "dependencies": {
     "opencc": "^1.1.1",

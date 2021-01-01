@@ -18,7 +18,7 @@ npm install -g
 
 - cli-tools
 - s2t
-- replace-texts
+- rptxt
 
 ### Uninstall
 
