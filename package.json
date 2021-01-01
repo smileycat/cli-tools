@@ -1,0 +1,20 @@
+{
+  "name": "cli-tools",
+  "version": "0.2.1",
+  "description": "CLI commands written in node.js",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "smileycat",
+  "license": "ISC",
+  "bin": {
+    "cli-tools": "src/index.js",
+    "s2t": "src/s2t.js",
+    "replace-texts": "src/replaceTexts.js"
+  },
+  "dependencies": {
+    "opencc": "^1.1.1",
+    "readline-sync": "^1.4.10"
+  }
+}
