@@ -2,7 +2,7 @@
 const fs = require('fs');
 const OpenCC = require('opencc');
 const opencc = new OpenCC('s2twp.json');
-
+const pathScanner = require('./utils/pathScanner');
 const args = process.argv.slice(2);
 
 if (!args.length) {
@@ -10,12 +10,7 @@ if (!args.length) {
   return;
 }
 
-args.forEach(file => {
-  if (!fs.existsSync(file)) {
-    console.error(`s2t: ${file}: No such file or directory`);
-    return;
-  }
-
+pathScanner(args, { appName: 's2t' }).forEach(file => {
   const content = fs.readFileSync(file);
   const converted = opencc.convertSync(content);
 

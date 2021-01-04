@@ -1,10 +1,10 @@
 {
   "name": "cli-tools",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "CLI commands written in node.js",
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "smileycat",
   "license": "ISC",
@@ -14,7 +14,11 @@
     "rptxt": "src/replaceTexts.js"
   },
   "dependencies": {
+    "glob": "^7.1.6",
     "opencc": "^1.1.1",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
   }
 }
