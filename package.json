@@ -1,9 +1,11 @@
 {
   "name": "cli-tools",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "CLI commands written in node.js",
   "main": "index.js",
   "scripts": {
+    "s2t": "node src/s2t",
+    "rptxt": "node src/replaceTexts",
     "test": "jest"
   },
   "author": "smileycat",
@@ -14,6 +16,7 @@
     "rptxt": "src/replaceTexts.js"
   },
   "dependencies": {
+    "commander": "^6.2.1",
     "glob": "^7.1.6",
     "opencc": "^1.1.1",
     "readline-sync": "^1.4.10"
