@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const box = require('./utils/boxDrawer');
 const package = require('../package.json');
 const commands = [
   {
@@ -7,16 +8,15 @@ const commands = [
   },
   {
     name: 'rptxt',
-    description: 'Replaces all occurrences in the text files with user specified text',
+    description: 'Replace all occurrences in the text files with user specified text',
   },
 ];
 
-console.log(`\n\u250c${'\u2500'.repeat(18)}\u2510`);
-console.log(`\u2502 CLI Tools v${package.version} \u2502`);
-console.log(`\u2514${'\u2500'.repeat(18)}\u2518`);
+box.draw(`${package.name} v${package.version}`, { padding: '0 15', style: 'bold' });
 
+const spacing = commands.reduce((max, { name }) => (name.length > max ? name.length : max), 0) + 2;
 commands.forEach(({ name, description }) => {
-  console.log(name.padEnd(15) + description);
+  console.log(name.padEnd(spacing) + description);
 });
 
 console.log();

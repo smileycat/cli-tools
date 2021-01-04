@@ -1,0 +1,42 @@
+{
+  "normal": {
+    "topLeft": "\u250c",
+    "topRight": "\u2510",
+    "bottomLeft": "\u2514",
+    "bottomRight": "\u2518",
+    "vertical": "\u2502",
+    "horizontal": "\u2500"
+  },
+  "bold": {
+    "topLeft": "\u250f",
+    "topRight": "\u2513",
+    "bottomLeft": "\u2517",
+    "bottomRight": "\u251b",
+    "vertical": "\u2503",
+    "horizontal": "\u2501"
+  },
+  "double": {
+    "topLeft": "\u2554",
+    "topRight": "\u2557",
+    "bottomLeft": "\u255a",
+    "bottomRight": "\u255d",
+    "vertical": "\u2551",
+    "horizontal": "\u2550"
+  },
+  "dashes": {
+    "topLeft": "\u250c",
+    "topRight": "\u2510",
+    "bottomLeft": "\u2514",
+    "bottomRight": "\u2518",
+    "vertical": "\u2506",
+    "horizontal": "\u2504"
+  },
+  "dots": {
+    "topLeft": "\u250c",
+    "topRight": "\u2510",
+    "bottomLeft": "\u2514",
+    "bottomRight": "\u2518",
+    "vertical": "\u250a",
+    "horizontal": "\u2508"
+  }
+}
