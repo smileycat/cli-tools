@@ -21,7 +21,7 @@ describe('Path Scanner Test', () => {
     const file = __dirname + 'pathTest';
     const paths = pathScanner([file], { appName: 'appName' });
 
-    expect(console.log).toHaveBeenCalledWith(`appName: ${file}: No such file or directory`);
+    expect(console.log).toHaveBeenCalledWith(`appName: ${file}: no such file or directory`);
     expect(paths.length).toBe(0);
   });
 
