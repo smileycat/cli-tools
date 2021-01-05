@@ -9,6 +9,7 @@ const opencc = new OpenCC('s2twp.json');
 const program = new commander.Command();
 
 program
+  .name('s2t')
   .usage('[options] file ...')
   .option('-i, --interactive', 'verify before processing each file')
   .parse(process.argv);

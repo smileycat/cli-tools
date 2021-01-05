@@ -6,6 +6,7 @@ const pathScanner = require('./utils/pathScanner');
 const program = new commander.Command();
 
 program
+  .name('rptxt')
   .usage('[options] file ...')
   .option('-i, --interactive', 'verify before processing each file')
   .parse(process.argv);
