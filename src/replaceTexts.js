@@ -21,7 +21,7 @@ const replacement = readline.question('new text: ', { keepWhitespace: true });
 console.log();
 
 // Processing through each provided file
-pathScanner(args, { appName: 'rptxt' }).forEach(file => {
+pathScanner(program.args, { appName: 'rptxt' }).forEach(file => {
   // Interactive mode
   if (program.interactive) {
     const ans = readline.question(`process ${file} (y/n)? `);
@@ -37,8 +37,10 @@ pathScanner(args, { appName: 'rptxt' }).forEach(file => {
     return;
   }
 
-  fs.writeFile(file, data, 'utf-8', err => {
-    if (err) console.err(`rptxt: ${file}: Error writing to file`);
-    else console.log(`rptxt: ${file}: ${count} changes`);
-  });
+  try {
+    fs.writeFileSync(file, data, 'utf-8');
+    console.log(`rptxt: ${file}: ${count} changes`);
+  } catch (err) {
+    console.err(`rptxt: ${file}: ${err}`);
+  }
 });

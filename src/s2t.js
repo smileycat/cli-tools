@@ -27,8 +27,10 @@ pathScanner(program.args, { appName: 's2t' }).forEach(file => {
   const content = fs.readFileSync(file);
   const converted = opencc.convertSync(content);
 
-  fs.writeFile(file, converted, err => {
-    if (err) console.err(`s2t: ${file}: Error writing to file`);
-    else console.log(`s2t: ${file}: Converted Successfully`);
-  });
+  try {
+    fs.writeFileSync(file, converted);
+    console.log(`s2t: ${file}: Converted Successfully`);
+  } catch (err) {
+    console.err(`s2t: ${file}: ${err}`);
+  }
 });
