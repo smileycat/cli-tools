@@ -1,11 +1,12 @@
 {
   "name": "cli-tools",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "description": "CLI commands written in node.js",
   "main": "index.js",
   "scripts": {
     "s2t": "node src/s2t",
     "rptxt": "node src/replaceTexts",
+    "rmline": "node src/removeLines",
     "test": "jest"
   },
   "author": "smileycat",
@@ -13,7 +14,8 @@
   "bin": {
     "cli-tools": "src/index.js",
     "s2t": "src/s2t.js",
-    "rptxt": "src/replaceTexts.js"
+    "rptxt": "src/replaceTexts.js",
+    "rmline": "src/removeLines.js"
   },
   "dependencies": {
     "commander": "^6.2.1",

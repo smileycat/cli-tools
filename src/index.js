@@ -8,7 +8,11 @@ const commands = [
   },
   {
     name: 'rptxt',
-    description: 'Replace all occurrences in the text files with user specified text',
+    description: 'Replace all matched text with new text',
+  },
+  {
+    name: 'rmline',
+    description: 'Remove lines that match the searched text',
   },
 ];
 

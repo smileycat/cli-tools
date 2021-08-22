@@ -19,6 +19,7 @@ npm install -g
 - cli-tools
 - s2t
 - rptxt
+- rmline
 
 ### Uninstall
 
