@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "commander": "^6.2.1",
-    "glob": "^7.1.6",
-    "opencc": "^1.1.1",
+    "glob": "^7.1.7",
+    "opencc": "^1.1.2",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
