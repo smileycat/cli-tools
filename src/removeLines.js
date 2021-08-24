@@ -11,6 +11,7 @@ program
   .usage('-t <text> [options] file ... ')
   .requiredOption('-t, --text <text>', 'text to search')
   .option('-c, --ignore-case', 'case insensitive')
+  .option('-e, --exact-match', 'exact match for text')
   .option('-i, --interactive', 'verify before processing each file')
   .parse(process.argv);
 
@@ -32,7 +33,8 @@ pathScanner(program.args, { appName: 'rmline' }).forEach(file => {
   let count = 0;
 
   rl.on('line', line => {
-    new RegExp(program.text, program.ignoreCase ? 'i' : '').test(line)
+    const searchText = program.exactMatch ? `^${program.text}$` : program.text;
+    new RegExp(searchText, program.ignoreCase ? 'i' : '').test(line)
       ? (count += 1)
       : writer.write(line + '\n');
   });

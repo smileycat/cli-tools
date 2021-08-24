@@ -1,6 +1,6 @@
 {
   "name": "cli-tools",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "CLI commands written in node.js",
   "main": "index.js",
   "scripts": {
